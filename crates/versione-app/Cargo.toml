@@ -1,0 +1,29 @@
+[package]
+name = "versione-app"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+readme.workspace = true
+authors.workspace = true
+description = "VERSIONE Studio — local creative library for music projects"
+publish = false
+
+[[bin]]
+name = "versione-studio"
+path = "src/main.rs"
+
+[dependencies]
+versione-core = { workspace = true }
+versione-studio-model = { workspace = true }
+eframe = { version = "0.31", default-features = true, features = ["default_fonts", "glow"] }
+egui = "0.31"
+rodio = { version = "0.20", default-features = false, features = ["wav", "flac", "mp3"] }
+rfd = "0.15"
+chrono = { workspace = true }
+serde = { workspace = true }
+image = { version = "0.25", default-features = false, features = ["png", "jpeg"] }
+
+[dev-dependencies]
+tempfile = { workspace = true }

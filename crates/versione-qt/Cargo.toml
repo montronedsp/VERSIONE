@@ -1,0 +1,29 @@
+[package]
+name = "versione-qt"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+readme.workspace = true
+authors.workspace = true
+description = "VERSIONE Studio Qt/QML shell"
+publish = false
+
+[[bin]]
+name = "versione-studio-qt"
+path = "src/main.rs"
+
+[dependencies]
+versione-core = { workspace = true }
+versione-studio-model = { workspace = true }
+cxx = "1.0.95"
+cxx-qt = "0.10"
+cxx-qt-lib = { version = "0.10", features = ["qt_full"] }
+serde = { workspace = true }
+serde_json = { workspace = true }
+rodio = { version = "0.20", default-features = false, features = ["wav", "flac", "mp3"] }
+rfd = "0.15"
+
+[build-dependencies]
+cxx-qt-build = { version = "0.10", features = ["link_qt_object_files"] }

@@ -1,0 +1,41 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/versione-core",
+    "crates/versione-cli",
+    "crates/versione-app",
+    "crates/versione-studio-model",
+    "crates/versione-qt",
+]
+default-members = [
+    "crates/versione-core",
+    "crates/versione-cli",
+    "crates/versione-app",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "GPL-3.0-only"
+repository = "https://github.com/montronedsp/VERSIONE"
+homepage = "https://github.com/montronedsp/VERSIONE"
+readme = "README.md"
+authors = ["MontroneDSP"]
+
+[workspace.dependencies]
+versione-core = { path = "crates/versione-core" }
+versione-studio-model = { path = "crates/versione-studio-model" }
+serde_json = "1.0"
+blake3 = "1.5"
+clap = { version = "4.5", features = ["derive"] }
+serde = { version = "1.0", features = ["derive"] }
+thiserror = "2.0"
+toml = "0.8"
+uuid = { version = "1.11", features = ["v4", "serde"] }
+chrono = { version = "0.4", default-features = false, features = ["clock", "std", "serde"] }
+tempfile = "3.14"
+ureq = { version = "2.12", default-features = true }
+hmac = "0.12"
+sha2 = "0.10"
+hex = "0.4"
+urlencoding = "2.1"

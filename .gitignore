@@ -1,0 +1,69 @@
+# Rust / Cargo
+/target/
+**/*.rs.bk
+Cargo.lock.bak
+
+# IDE / editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# OS junk
+ehthumbs.db
+$RECYCLE.BIN/
+
+# Local env / secrets (never commit)
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+secrets/
+
+# Test / coverage artifacts
+coverage/
+*.profraw
+*.profdata
+lcov.info
+
+# Local scratch (keep out of the public tree)
+/scratch/
+/.tmp/
+
+# Ableton / DAW proprietary material must not land here
+*.als
+*.alp
+*.amxd
+*.adv
+*.adg
+*.agr
+*.asd
+
+# Python caches if tooling appears later
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node caches if desktop tooling appears later
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Local machine config (QMAKE paths, etc.)
+.cargo/
+
+# Qt / QML tooling noise
+aqtinstall.log
+**/.qmlls.ini
+*.qmlc
+*.jsc
+
+# C++ / MOC intermediates that may appear beside the tree
+**/moc_*.cpp
+**/moc_*.h
